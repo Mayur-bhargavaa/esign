@@ -1,0 +1,9 @@
+node_modules
+.env
+.DS_Store
+*.log
+server/storage/templates/*
+server/storage/signed/*
+!server/storage/templates/.gitkeep
+!server/storage/signed/.gitkeep
+client/.next

@@ -1,0 +1,29 @@
+{
+  "name": "esign-client",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000"
+  },
+  "dependencies": {
+    "axios": "^1.8.4",
+    "lucide-react": "^0.577.0",
+    "next": "^14.2.25",
+    "pdfjs-dist": "^4.10.38",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-pdf": "^9.2.1",
+    "signature_pad": "^5.0.6"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.11",
+    "@types/react": "^18.3.20",
+    "@types/react-dom": "^18.3.6",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.8.2"
+  }
+}
