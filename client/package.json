@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "axios": "^1.8.4",
+    "core-js": "^3.48.0",
     "lucide-react": "^0.577.0",
     "next": "^14.2.25",
     "pdfjs-dist": "^4.10.38",

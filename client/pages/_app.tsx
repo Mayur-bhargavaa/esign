@@ -1,3 +1,4 @@
+import 'core-js/actual/promise/with-resolvers';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import '../styles/globals.css';
