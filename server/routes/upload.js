@@ -71,9 +71,7 @@ router.post('/', upload.single('file'), async (req, res) => {
       expires_at: expiresAt
     });
 
-    const protocol = req.headers['x-forwarded-proto'] || req.protocol;
-    const host = req.headers['x-forwarded-host'] || req.get('host');
-    const signingLink = `${process.env.APP_BASE_URL || `${protocol}://${host}`}/sign/${token}`;
+    const signingLink = `https://esign.stitchbyte.in/sign/${token}`;
 
     await sendSigningLinkEmail({
       to: candidateEmail,
