@@ -7,7 +7,7 @@ import Toast from '../../components/Toast';
 
 const apiBaseUrl = process.env.NEXT_PUBLIC_SINGLE_PORT === 'true'
   ? ''
-  : process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:4000';
+  : process.env.NEXT_PUBLIC_API_BASE_URL || 'https://esign.stitchbyte.in';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 

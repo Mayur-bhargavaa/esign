@@ -63,8 +63,8 @@ cp .env.example .env
 2. Configure values in `.env`:
 
 - `MONGODB_URI` (example: `mongodb://127.0.0.1:27017/stitchbyte_esign`)
-- `APP_BASE_URL` (`http://localhost:3000`)
-- `NEXT_PUBLIC_API_BASE_URL` (`http://localhost:4000`)
+- `APP_BASE_URL` (`https://esign.stitchbyte.in`)
+- `NEXT_PUBLIC_API_BASE_URL` (`https://esign.stitchbyte.in`)
 - SMTP credentials (`SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`) for real email sending
 - `ADMIN_EMAIL` for receiving the signed PDF attachment
 
@@ -80,8 +80,8 @@ npm install
 npm run dev
 ```
 
-- Frontend: `http://localhost:3000`
-- Backend: `http://localhost:4000`
+- Frontend: `https://esign.stitchbyte.in`
+- Backend: `https://esign.stitchbyte.in`
 
 ## API Endpoints
 

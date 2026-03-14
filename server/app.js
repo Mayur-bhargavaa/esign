@@ -60,7 +60,8 @@ async function start() {
   });
 
   app.listen(port, () => {
-    console.log(`Server running on http://localhost:${port}`);
+    const serverUrl = isSinglePort ? 'https://esign.stitchbyte.in' : `http://localhost:${port}`;
+    console.log(`Server running on ${serverUrl}`);
     if (isSinglePort) {
       console.log('Serving frontend and backend on a single port for production!');
     }
