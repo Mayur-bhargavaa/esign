@@ -4,9 +4,9 @@ import { FormEvent, useEffect, useMemo, useState } from 'react';
 import { ClipboardList, ArrowLeft, CheckCircle2, Clock } from 'lucide-react';
 import Toast from '../components/Toast';
 
-const apiBaseUrl = process.env.NEXT_PUBLIC_SINGLE_PORT === 'true'
+const apiBaseUrl = process.env.NODE_ENV === 'production' || process.env.NEXT_PUBLIC_SINGLE_PORT === 'true'
   ? ''
-  : process.env.NEXT_PUBLIC_API_BASE_URL || 'https://esign.stitchbyte.in';
+  : process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:4000';
 
 type SignedLocation = {
   page: number;

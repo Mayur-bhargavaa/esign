@@ -71,7 +71,8 @@ router.post('/', upload.single('file'), async (req, res) => {
       expires_at: expiresAt
     });
 
-    const signingLink = `https://esign.stitchbyte.in/sign/${token}`;
+    const appBaseUrl = String(process.env.APP_BASE_URL || 'http://localhost:3000').replace(/\/$/, '');
+    const signingLink = `${appBaseUrl}/sign/${token}`;
 
     await sendSigningLinkEmail({
       to: candidateEmail,
