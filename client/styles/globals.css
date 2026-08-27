@@ -1,8 +1,9 @@
-/* ═══════════════════════════════════════════════════════════════
-   Stitchbyte eSign — Clean Black & White Design
-   ═══════════════════════════════════════════════════════════════ */
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Great+Vibes&family=Satisfy&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* ── Design Tokens ────────────────────────────────────────────── */
 :root {
@@ -1585,4 +1586,14 @@ button, input, select, textarea {
 	.stat-value {
 		font-size: 1.1rem;
 	}
+}
+
+/* Custom PDF Viewer responsiveness overrides */
+.react-pdf__Page__canvas {
+	max-width: 100% !important;
+	height: auto !important;
+}
+.react-pdf__Page {
+	max-width: 100% !important;
+	height: auto !important;
 }

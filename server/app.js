@@ -1,8 +1,19 @@
-require('dotenv').config({ path: require('path').resolve(__dirname, '..', '.env') });
+const fs = require('fs');
+const path = require('path');
+
+const rootEnv = path.resolve(__dirname, '..', '.env');
+const serverEnv = path.resolve(__dirname, '.env');
+
+if (fs.existsSync(rootEnv)) {
+  require('dotenv').config({ path: rootEnv });
+} else if (fs.existsSync(serverEnv)) {
+  require('dotenv').config({ path: serverEnv });
+} else {
+  require('dotenv').config();
+}
 
 const express = require('express');
 const cors = require('cors');
-const path = require('path');
 const next = require('next');
 const { connectToMongo } = require('./mongo');
 
@@ -60,7 +71,7 @@ async function start() {
   });
 
   app.listen(port, () => {
-    const serverUrl = isSinglePort ? 'https://esign.stitchbyte.in' : `http://localhost:${port}`;
+    const serverUrl = isProduction ? 'https://esign.stitchbyte.in' : `http://localhost:${port}`;
     console.log(`Server running on ${serverUrl}`);
     if (isSinglePort) {
       console.log('Serving frontend and backend on a single port for production!');
